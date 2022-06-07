@@ -1,9 +1,23 @@
+#/usr/bin/python3
+
 import random
 from pydub import AudioSegment
-from pydub.playback import play
 
-stringy = 'The quick brown fox jumps over the lazy dog.'
-pitch = 'med' # choose between 'high', 'med', 'low', or 'lowest'
+def func_pitch():
+  pitch = str(input("Pitch? Options: high, med, low, lowest ")) # choose between 'high', 'med', 'low', or 'lowest'
+  return pitch
+
+def func_text():
+  stringy = str(input("Your phrase? Only Roman alphabet characters are allowed! "))
+  return stringy
+
+stringy = func_text()
+
+pitch = func_pitch()
+
+a = str(input("File name? "))
+
+b = str(input("File format? Options: ogg, mp3, wav. "))
 
 stringy = stringy.lower()
 sounds = {}
@@ -35,8 +49,6 @@ for i, char in enumerate(stringy):
 		elif char == ',' or char == '?':
 			infiles.append(sounds['.'])
 			continue
-		elif char == stringy[i-1]: #skip repeat letters
-			continue
 	except:
 		pass
 	if not char.isalpha() and char != '.': # skip characters that are not letters or periods. 
@@ -61,4 +73,4 @@ for index,sound in enumerate(infiles):
 	combined_sounds = new_sound if combined_sounds is None else combined_sounds + new_sound
 
 
-combined_sounds.export("./sound.wav", format="wav")
+combined_sounds.export(a, format = b)
