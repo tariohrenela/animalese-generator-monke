@@ -1,7 +1,7 @@
-# Animalese Audio Generator
+# Animalese Audio Monke Generator
 
 ## General info
-This project allows you to generate audio from text in the style of animalese from the Animal Crossing games. 
+This project allows you to easily generate audio from text in the style of animalese from the Animal Crossing games.
 
 ## Technologies
 Project is created with:
@@ -11,7 +11,7 @@ Project is created with:
 ```
 $ pip install pydub
 ```
-[You'll also need to install `ffmpeg` or `libav` for this to work](https://github.com/jiaaro/pydub#dependencies)
+[You'll also need to install `ffmpeg` or `libav` ~~and thank Equalo~~ for this to work](https://github.com/jiaaro/pydub#dependencies)
 ```
 $ brew install ffmpeg
 ```
@@ -19,3 +19,13 @@ or
 ```
 $ brew install libav
 ```
+or
+```
+http://builds.libav.org/windows/
+```
+or
+```
+https://ffmpeg.org/
+```
+
+
