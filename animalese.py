@@ -19,7 +19,7 @@ pitch = func_pitch()
 
 a = str(input("File name? "))
 
-b = str(input("File extension? Options: ogg, mp3, wav. Add it to the file name later. "))
+print("A file w/ no extension will be made. Change it to .ogg, .wav or .mp3. ")
 
 stringy = stringy.lower()
 sounds = {}
@@ -74,4 +74,4 @@ for index,sound in enumerate(infiles):
 	new_sound = new_sound.set_frame_rate(44100) # set uniform sample rate
 	combined_sounds = new_sound if combined_sounds is None else combined_sounds + new_sound
 
-	combined_sounds.export(a, format=b)
+	combined_sounds.export(a, format="ogg")
