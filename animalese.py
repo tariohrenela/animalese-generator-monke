@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 import random
 from pydub import AudioSegment
 
@@ -68,4 +70,4 @@ for index,sound in enumerate(infiles):
     new_sound = new_sound.set_frame_rate(44100) # set uniform sample rate
     combined_sounds = new_sound if combined_sounds is None else combined_sounds + new_sound
 
-    combined_sounds.export(a, format="")
+    combined_sounds.export(a, format="ogg")
